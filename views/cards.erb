@@ -1,0 +1,7 @@
+<h2><%= @deck.name %></h2>
+
+<form action="/decks/:id" method="POST">
+  <input type="hidden" name="_method" value="PATCH">
+  <input type="text" name="deck[:name]" value="<%= @deck.name %>">
+  <input type="submit" value="Edit deck name">
+</form>

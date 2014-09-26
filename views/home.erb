@@ -1,0 +1,16 @@
+<h2>Welcome to the Flashcard Game</h2>
+<a href="/decks/new">Create new deck</a>
+<h3>Pick a deck to play</h3>
+
+<% @decks.each do |deck| %>
+  <ul>
+    <li>
+      <a href="/decks/<%= deck.id %>"><%= deck.name %></p></a>
+      <a href="/decks/<%= deck.id %>/edit">Edit deck</a>
+      <form action="/decks/<%= deck.id %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete deck">
+      </form>
+    </li>
+  </ul>
+<% end %>

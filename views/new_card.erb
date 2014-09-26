@@ -1,0 +1,11 @@
+<h2>Create a new card</h2>
+
+<form action="/decks/<%= @deck.id %>/cards" method="POST">
+  <label for="card_front">Card front (Foreign word)</label>
+  <input id="card_front" type="text" name="card[front]">
+  <br /><br />
+  <label for="card_back">Card back (English word)</label>
+  <input id="card_back" type="text" name="card[back]">
+  <br /><br />
+  <input type="submit" type="text" value="Create card">
+</form>
