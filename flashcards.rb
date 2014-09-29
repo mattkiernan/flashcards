@@ -85,11 +85,6 @@ patch "/decks/:deck_id/cards/:card_id" do
   redirect to "/decks/#{params[:deck_id]}/cards"
 end
 
-delete "/decks/:deck_id/cards/:card_id" do
-  card = Card.find(params[:card_id])
-  card.destroy
-  redirect to "/decks/#{params[:deck_id]}/cards"
-end
 
 
 
